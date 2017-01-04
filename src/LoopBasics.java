@@ -9,10 +9,20 @@ public class LoopBasics {
             i ++;
         }
 
-        int even = 100;
+        int fives = 100;
         do {
-            System.out.println(even);
-            even = even - 5;
-        } while (even >= -10);
+            System.out.println(fives);
+            fives = fives - 5;
+        } while (fives >= -10);
+
+        long squared = 2;
+        do {
+            System.out.println(squared);
+            squared = squared * squared;
+        } while (squared < 1000000);
+
+
+
+
     }
 }
