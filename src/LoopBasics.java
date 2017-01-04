@@ -5,6 +5,7 @@ import java.util.Scanner;
  */
 public class LoopBasics {
     public static void main(String[] args) {
+// Exercise 1
 // Exercise i While Loop
         int i = 5;
         while (i <= 15) {
@@ -25,11 +26,11 @@ public class LoopBasics {
             fives = fives - 5;
         } while (fives >= -10);
 
-        long squared = 2;
+        long square = 2;
         do {
-            System.out.println(squared);
-            squared = squared * squared;
-        } while (squared < 1000000);
+            System.out.println(square);
+            square = square * square;
+        } while (square < 1000000);
 
 // Exercise iii For Loops
         for (int k = 5; k <= 15; k++) {
@@ -53,7 +54,9 @@ public class LoopBasics {
         System.out.println("Please enter a number");
         int userNumber = sc.nextInt();
         for (int e = 1; e <= userNumber; e++ ) {
-                System.out.println(e + " squared = " + Math.pow(e, 2) + " and " + e + " cubed = " + Math.pow(e, 3));
+            int squared = (int) Math.pow(e, 2);
+            int cubed = (int) Math.pow(e, 3);
+                System.out.println(e + " squared = " + squared + " and " + e + " cubed = " + cubed);
         }
 
 // Exercise 4 Convert grades
