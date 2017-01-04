@@ -9,10 +9,10 @@ public class LoopBasics {
             i ++;
         }
 
-        int even = 0;
+        int even = 100;
         do {
             System.out.println(even);
-            even = even + 2;
-        } while (even <= 100);
+            even = even - 5;
+        } while (even >= -10);
     }
 }
