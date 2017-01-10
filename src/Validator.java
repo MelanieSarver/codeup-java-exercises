@@ -13,8 +13,8 @@ public class Validator {
         try {
             userInteger = scan.nextInt();
         } catch (InputMismatchException e) {
-            scan.next();
             System.out.println("Please enter a valid integer.");
+            scan.next();
             return getInt(prompt);
         }
         return userInteger;
@@ -29,8 +29,11 @@ public class Validator {
                 throw new IllegalArgumentException("Integer is out of range.");
             }
         } catch(IllegalArgumentException e) {
-            scan.next();
+            System.out.println("Error! Integer is out of range.");
+            return getIntWithinRange(prompt, min, max);
+        } catch(InputMismatchException e) {
             System.out.println("Error! Invalid integer value. Try again.");
+            scan.next();
             return getIntWithinRange(prompt, min, max);
         }
         return userRange;
@@ -54,23 +57,30 @@ public class Validator {
         System.out.println(prompt);
         try {
             userDoubleRange = scan.nextDouble();
+            scan.nextLine();
             if (userDoubleRange > max || userDoubleRange < min) {
                 throw new IllegalArgumentException("Integer is out of range.");
             }
         } catch(IllegalArgumentException e) {
-            scan.next();
             System.out.println("Error! Invalid decimal value. Please try again.");
+            return getDoubleWithinRange(prompt, min, max);
+        } catch(InputMismatchException e) {
+            System.out.println("Error! Invalid decimal value. Please try again.");
+            scan.next();
             return getDoubleWithinRange(prompt, min, max);
         }
         return userDoubleRange;
     }
-//    public String getRequiredString(String prompt)
+
     String getRequiredString(String prompt) {
         String userString;
         System.out.println(prompt);
         try {
             userString = scan.nextLine();
-        } catch(Exception e) {
+            if (userString.equals("") || userString.equals(" ")) {
+                throw new IllegalArgumentException("Please enter a valid word");
+            }
+        } catch(IllegalArgumentException e) {
             System.out.println("Something went wrong...");
             return getRequiredString(prompt);
         }
