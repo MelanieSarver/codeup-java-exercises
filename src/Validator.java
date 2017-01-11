@@ -10,7 +10,7 @@ public class Validator {
 
     int getInt(String prompt) {
         int userInteger;
-        System.out.println(prompt);
+        System.out.print(prompt);
         try {
             userInteger = scan.nextInt();
         } catch (InputMismatchException e) {
@@ -23,7 +23,7 @@ public class Validator {
 
     int getIntWithinRange(String prompt, int min, int max) {
         int userRange;
-        System.out.println(prompt);
+        System.out.print(prompt);
         try {
             userRange = scan.nextInt();
             if (userRange > max || userRange < min) {
@@ -42,7 +42,7 @@ public class Validator {
 
     double getDouble(String prompt) {
         double userDouble;
-        System.out.println(prompt);
+        System.out.print(prompt);
         try {
             userDouble = scan.nextDouble();
         } catch(InputMismatchException e) {
@@ -55,7 +55,7 @@ public class Validator {
 
     double getDoubleWithinRange(String prompt, double min, double max) {
         double userDoubleRange;
-        System.out.println(prompt);
+        System.out.print(prompt);
         try {
             userDoubleRange = scan.nextDouble();
             scan.nextLine();
@@ -75,7 +75,7 @@ public class Validator {
 
     String getRequiredString(String prompt) {
         String userString;
-        System.out.println(prompt);
+        System.out.print(prompt);
         try {
             userString = scan.nextLine();
             if (userString.equals("") || userString.equals(" ")) {
@@ -91,7 +91,7 @@ public class Validator {
     boolean moreData(String prompt) {
         String answer;
         boolean value;
-        System.out.println(prompt);
+        System.out.print(prompt);
         answer = scan.next();
         if (!answer.equalsIgnoreCase("y") && !answer.equalsIgnoreCase("n")) {
             System.out.println("Please enter 'y' or 'n'.");
