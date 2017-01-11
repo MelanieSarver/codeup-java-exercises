@@ -1,11 +1,12 @@
 import java.util.InputMismatchException;
 import java.util.Scanner;
+import java.util.Random;
 
 /**
  * Created by mel on 1/10/17.
  */
 public class Validator {
-    Scanner scan = new Scanner(System.in);
+    Scanner scan;
 
     int getInt(String prompt) {
         int userInteger;
@@ -18,7 +19,7 @@ public class Validator {
             return getInt(prompt);
         }
         return userInteger;
-}
+    }
 
     int getIntWithinRange(String prompt, int min, int max) {
         int userRange;
@@ -85,6 +86,24 @@ public class Validator {
             return getRequiredString(prompt);
         }
         return userString;
+    }
+
+    boolean moreData(String prompt) {
+        String answer;
+        boolean value;
+        System.out.println(prompt);
+        answer = scan.next();
+        if (!answer.equalsIgnoreCase("y") && !answer.equalsIgnoreCase("n")) {
+            System.out.println("Please enter 'y' or 'n'.");
+            return moreData(prompt);
+        }
+        if (answer.equalsIgnoreCase("y")){
+            value = true;
+            return value;
+        } else {
+            value = false;
+            return value;
+        }
     }
 
     public Validator(Scanner scan) {
