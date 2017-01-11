@@ -22,7 +22,7 @@ public class BattingStats {
 
             int[] player = new int[atBats];
             for (int i = 0; i < player.length; i++) {
-                bases = validator.getIntWithinRange("Which base did they get to?", 0, 4);
+                bases = validator.getIntWithinRange("Which base did they get to? ", 0, 4);
                 player[i] = bases;
             }
 //Print out players's data
@@ -30,7 +30,7 @@ public class BattingStats {
             battingAvg(player, atBats);
             sluggingPercent(player, atBats);
 
-            keepGoing = validator.moreData("Do you have more players to enter?");
+            keepGoing = validator.moreData("Do you have more players to enter? ");
         } while(keepGoing);
 
     }
