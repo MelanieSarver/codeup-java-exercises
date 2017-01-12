@@ -1,6 +1,5 @@
 import java.util.InputMismatchException;
 import java.util.Scanner;
-import java.util.Random;
 
 /**
  * Created by mel on 1/10/17.
@@ -106,7 +105,14 @@ public class Validator {
         }
     }
 
+    int random(int max, int min) {
+        int range = (max - min) + 1;
+        return (int)(Math.random() * range) + min;
+    }
+
     public Validator(Scanner scan) {
         this.scan = scan;
     }
 }
+
+
