@@ -1,13 +1,14 @@
+import Validation.Validator;
 import java.util.Scanner;
 
 /**
- * Created by mel on 1/17/17.
+ * @author Created by mel on 1/17/17.
  */
 public class CircleApp {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
         Validator validator = new Validator(scan);
-        boolean anotherCircle = false;
+        boolean anotherCircle;
         System.out.println("==================================================");
         System.out.println("Need help calculating a circle? Let's get started!");
         System.out.println("==================================================");
