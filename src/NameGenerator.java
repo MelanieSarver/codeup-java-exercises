@@ -1,7 +1,8 @@
+import Validation.Validator;
 import java.util.Random;
 import java.util.Scanner;
 /**
- * Created by mel on 1/11/17.
+ * @author Created by mel on 1/11/17.
  */
 public class NameGenerator {
     public static void main(String[] args) {
@@ -22,7 +23,7 @@ public class NameGenerator {
         }
     }
 
-    public static String randomElement(String[] array, Random random) {
+    private static String randomElement(String[] array, Random random) {
         return array[random.nextInt(array.length)];
     }
 
