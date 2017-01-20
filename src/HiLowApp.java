@@ -1,7 +1,8 @@
+import Validation.Validator;
 import java.util.Scanner;
 
 /**
- * Created by mel on 1/10/17.
+ * @author Created by mel on 1/10/17.
  */
 public class HiLowApp {
     public static void main(String[] args) {
