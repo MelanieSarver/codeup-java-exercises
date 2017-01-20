@@ -1,13 +1,15 @@
+package Validation;
+
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
 /**
- * Created by mel on 1/10/17.
+ * @author Created by mel on 1/10/17.
  */
 public class Validator {
     Scanner scan;
 
-    int getInt(String prompt) {
+    public int getInt(String prompt) {
         int userInteger;
         System.out.print(prompt);
         try {
@@ -20,7 +22,7 @@ public class Validator {
         return userInteger;
     }
 
-    int getIntWithinRange(String prompt, int min, int max) {
+    public int getIntWithinRange(String prompt, int min, int max) {
         int userRange;
         System.out.print(prompt);
         try {
@@ -39,7 +41,7 @@ public class Validator {
         return userRange;
     }
 
-    double getDouble(String prompt) {
+    public double getDouble(String prompt) {
         double userDouble;
         System.out.print(prompt);
         try {
@@ -52,7 +54,7 @@ public class Validator {
         return userDouble;
     }
 
-    double getDoubleWithinRange(String prompt, double min, double max) {
+    public double getDoubleWithinRange(String prompt, double min, double max) {
         double userDoubleRange;
         System.out.print(prompt);
         try {
@@ -72,7 +74,7 @@ public class Validator {
         return userDoubleRange;
     }
 
-    String getRequiredString(String prompt) {
+    public String getRequiredString(String prompt) {
         String userString;
         System.out.print(prompt);
         try {
@@ -87,7 +89,7 @@ public class Validator {
         return userString;
     }
 
-    boolean moreData(String prompt) {
+    public boolean moreData(String prompt) {
         String answer;
         boolean value;
         System.out.print(prompt);
@@ -105,7 +107,7 @@ public class Validator {
         }
     }
 
-    int random(int max, int min) {
+    public int random(int max, int min) {
         int range = (max - min) + 1;
         return (int)(Math.random() * range) + min;
     }
