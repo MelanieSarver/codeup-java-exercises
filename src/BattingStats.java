@@ -1,9 +1,10 @@
+import Validation.Validator;
 import java.util.Arrays;
 import java.util.Scanner;
 import java.util.stream.IntStream;
 
 /**
- * Created by mel on 1/11/17.
+ * @author Created by mel on 1/11/17.
  */
 public class BattingStats {
     public static void main(String[] args) {
@@ -11,7 +12,7 @@ public class BattingStats {
         Validator validator = new Validator(scan);
         int atBats;
         int bases;
-        boolean keepGoing = false;
+        boolean keepGoing;
 
         System.out.println("           Sports stats! Yay...");
         System.out.println("           ====================");
@@ -34,7 +35,7 @@ public class BattingStats {
 
     }
 
-    public static float battingAvg(int[] player, int atBats) {
+    private static float battingAvg(int[] player, int atBats) {
         int onBase = 0;
         for(int i = 0; i < player.length; i++) {
             if(player[i] > 0) {
@@ -47,7 +48,7 @@ public class BattingStats {
         return average;
     }
 
-    public static float sluggingPercent(int[] player, int atBats) {
+    private static float sluggingPercent(int[] player, int atBats) {
         int sum = IntStream.of(player).sum();
         float percentage =  (float) sum / atBats;
         String percentageFormat = String.format("%.3f", percentage);
