@@ -1,3 +1,7 @@
+package RockPaperScissors;
+
+import Validation.Validator;
+
 import java.util.Scanner;
 /**
  * @author Created by mel on 1/18/17.

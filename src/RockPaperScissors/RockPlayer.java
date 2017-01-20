@@ -1,3 +1,5 @@
+package RockPaperScissors;
+
 /**
  * @author Created by mel on 1/18/17.
  */
